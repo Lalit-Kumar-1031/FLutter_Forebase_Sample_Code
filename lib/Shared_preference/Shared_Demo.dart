@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'EditText.dart';
 class Shared_Demo extends StatefulWidget {
   const Shared_Demo({Key? key}) : super(key: key);
 
@@ -29,13 +29,12 @@ class _Shared_DemoState extends State<Shared_Demo> {
                 SizedBox(height: 150,),
                 SizedBox(
                   width: MediaQuery.of(context).size.width*0.7,
-                  child: TextFormField(
-                    controller: nameController,
-                    decoration: InputDecoration(
-                      label: Text("Enter Name here "),
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
+                  child: EditText(nameController,"Enter name",Icons.person),
+                ),
+                SizedBox(height: 150,),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*0.7,
+                  child: EditText(nameController,"Enter Password",Icons.security_sharp),
                 ),
                 SizedBox(height: 20,),
                 ElevatedButton(onPressed:()async{

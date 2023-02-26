@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase/FireStore/InsertScreen.dart';
 import 'package:firebase/Image_Upload/Img_Upload.dart';
 import 'package:firebase/Screen/LoginScreen.dart';
+import 'package:firebase/Screen/SignUp2.dart';
 //import 'package:firebase/Screen/PostScreen.dart';
 //import 'package:firebase/Screen/SignUpScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -28,13 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
     {
       Timer(Duration(seconds: 5), () {
         //Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) =>InsertScreen()));
-        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => ImgUpload(),));
+        Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) =>ForgotPasswordScreen() ,));
       });
     }
     else
       {
         Timer(Duration(seconds: 5), () {
-          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) =>LoginScreen()));
+          Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) =>ForgotPasswordScreen()));
         });
       }
   }
